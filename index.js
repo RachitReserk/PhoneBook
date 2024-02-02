@@ -8,6 +8,7 @@ app.use(morgan(':method :url :status :response-time ms - :res[content-length] :b
 const cors = require('cors')
 app.use(cors())
 const Contact = require('./models/contact')
+app.use(express.static('dist'))
 
 
 const utcDate1 = new Date(Date.now())
