@@ -1,3 +1,4 @@
+app.use(express.static('dist'))
 require('dotenv').config()
 const express = require('express')
 const app = express()
@@ -8,7 +9,7 @@ app.use(morgan(':method :url :status :response-time ms - :res[content-length] :b
 const cors = require('cors')
 app.use(cors())
 const Contact = require('./models/contact')
-app.use(express.static('dist'))
+
 
 
 const utcDate1 = new Date(Date.now())
